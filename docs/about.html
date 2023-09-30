@@ -140,8 +140,12 @@ ul.task-list li input[type="checkbox"] {
 
 <p>Trying to get this project to work has been very frustrating. Several attempts to begin a new project didn’t work, as an index file wasn’t generated.</p>
 <ul>
-<li><p>To the best of my understanding, an index file is necessary to create a website using Quarto, as it acts as the homepage – without it, you can have all of the pages you want, but it won’t “catch” when you go to publish the pages on Github. Does this sound correct?</p></li>
-<li><p>I kept trying to create a new project by clicking in the right corner and selecting “New Project”, however this method didn’t provide me an index. However, when I selected File –&gt; New Project… the index file appeared.</p>
+<li><p>To the best of my understanding, an index file is necessary to create a website using Quarto, as it acts as the homepage – without it, you can have all of the pages you want, but it won’t “catch” when you go to publish the pages on Github. Does this sound correct?</p>
+<ul>
+<li>Oliver said that it could be renamed? Discuss this with Kelvin.</li>
+</ul></li>
+</ul>
+<p>I kept trying to create a new project by clicking in the right corner and selecting “New Project”, however this method didn’t provide me an index. However, when I selected File –&gt; New Project… the index file appeared.</p>
 <p>Why?</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -154,8 +158,12 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/Screenshot 2023-09-29 162559.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Good Method of Creating a New Project</figcaption>
 </figure>
-</div></li>
-<li><p>I wasn’t quite sure about the purpose of the index.qmb file vs.&nbsp;the _quarto.yaml file. The way I am thinking about it now…index just displays the text of the home page. While there isn’t anything too special happening with the page, it is necessary for the site to render. The _quarto file controls the visuals of the site – the navigation, formatting, pages displayed, etc. So the _quarto file tells the index file (and all of the other files that make up the site) how to look. Is this right?</p></li>
+</div>
+<ul>
+<li><p>I wasn’t quite sure about the purpose of the index.qmb file vs.&nbsp;the _quarto.yaml file. The way I am thinking about it now…index just displays the text of the home page. While there isn’t anything too special happening with the page, it is necessary for the site to render. The _quarto file controls the visuals of the site – the navigation, formatting, pages displayed, etc. So the _quarto file tells the index file (and all of the other files that make up the site) how to look. Is this right?</p>
+<ul>
+<li>Oliver said this was correct.</li>
+</ul></li>
 <li><p>If my thoughts above are true, then to update my website, I will need to create a new .qmd for each additional page I want to add (example Homework_3.qmd) and save it to the oliviawilsonpietrzak.github.io folder. I would render the .qmd so that I have an HTML version of the file, and then I would add the .qmd to the _quarto.yaml file for the site, formatting like this:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -164,8 +172,16 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div></li>
 </ul>
-<p>This is true, I tested it with this Troubleshooting page. So for a new page to display, create the page, render and save it, add to .yaml, then render the site to ensure it is working correctly.</p>
+<p>This is true, I tested it with this Troubleshooting page. So for a new page to display, create the page, render and save it, add to .yml, then render the site to ensure it is working correctly.</p>
 <p>I’m at the point where I can render the site locally to make sure it’s functioning correctly, but how to get it into Github?</p>
+<p>This was where the bulk of my work with Oliver came in. We changed the .yml file to include an output directory (saves all of the html files in one place) and added in no jekyll in the terminal (still haven’t researched this to see what it does).</p>
+<p>Then we went to the repository in my Github that I was using for my site, and dragged the docs folder in. The final step was going to Settings –&gt; Pages –&gt; Build and deploy and selecting the branch /docs as the one to push for the site.<img src="images/Screenshot 2023-09-30 094833.png" class="img-fluid" alt="Final step of site build."></p>
+<p>Oliver said that to incorporate a new page, I would have to:</p>
+<ol type="1">
+<li><p>Create the .qmd, render it, save the file,</p></li>
+<li><p>Add the new page to the .yml and save the file,</p></li>
+<li><p>Drag the new html page from the docs folder to the repository and commit the change.</p></li>
+</ol>
 
 
 
