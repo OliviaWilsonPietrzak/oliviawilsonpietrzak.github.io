@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "oliviawilsonpietrzak.github.io"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: About Me.qmd
+        text: About Me
+      - href: CV.qmd
+        text: CV
+      - href: Homework_1.qmd
+        text: Homework 1
+      - href: Homework_2.qmd
+        text: Homework 2
+      - href: Homework_3.qmd
+        text: Homework 3
+      - href: about.qmd
+        text: Troubleshooting
+format:
+  html:
+    theme: yeti
+    css: styles.css
+    toc: true
+
+editor: visual
+
